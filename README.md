@@ -27,13 +27,13 @@ Locate your OS in the link below and follow instructions carefully - once both G
 **B. Running the Program:**
 
 - Clone the master branch on to your local machine into a directory of your choosing
-- In your terminal, locate the directory, and enter the directory `assignment-1`
+- In your terminal, locate the directory, and enter the directory `Simple-ATM`
 - Run the command `gradle run`
 - The program is now running, allowing you to interact with it appropriately
 
 **C. Testing the Program:**
 
-- In your terminal, locate the directory, and enter the directory `assignment-1`
+- In your terminal, locate the directory, and enter the directory `Simple-ATM`
 - Run the command `gradle test`
 - The program will run its test suite, indicating any failed tests
 
