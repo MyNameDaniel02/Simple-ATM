@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="assignment.CardTests" tests="12" skipped="0" failures="0" errors="0" timestamp="2021-09-24T08:56:34" hostname="DESKTOP-QFLJ6HC" time="0.009">
+  <properties/>
+  <testcase name="isMissingTests()" classname="assignment.CardTests" time="0.001"/>
+  <testcase name="testGettersSetters()" classname="assignment.CardTests" time="0.0"/>
+  <testcase name="cardIsValid()" classname="assignment.CardTests" time="0.0"/>
+  <testcase name="cardIsInvalid()" classname="assignment.CardTests" time="0.001"/>
+  <testcase name="getExpiryStringTests()" classname="assignment.CardTests" time="0.0"/>
+  <testcase name="cardValidityEdgeCases()" classname="assignment.CardTests" time="0.001"/>
+  <testcase name="isStolenTests()" classname="assignment.CardTests" time="0.001"/>
+  <testcase name="isSafeTests()" classname="assignment.CardTests" time="0.0"/>
+  <testcase name="getIssueStringTests()" classname="assignment.CardTests" time="0.001"/>
+  <testcase name="isCurrentTests()" classname="assignment.CardTests" time="0.001"/>
+  <testcase name="isNotExpiredTests()" classname="assignment.CardTests" time="0.0"/>
+  <testcase name="toStringTests()" classname="assignment.CardTests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

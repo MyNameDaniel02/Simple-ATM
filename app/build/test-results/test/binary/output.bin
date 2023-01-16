@@ -1,0 +1,28 @@
+Transaction Number: 2
+Transaction Type: Deposit
+Amount Deposited: $100.00
+Account Balance: $110.00
+Transaction Number: 2
+Transaction Type: Deposit
+Amount Deposited: $1000.00
+Account Balance: $1001.00
+Transaction Number: 3
+Transaction Type: Deposit
+Amount Deposited: $1000.00
+Account Balance: $1000.00
+21tUnfortunately your card has expired on 01012021! Please contact your local XYZ branch to get a new card. Thank you!
+21–We love the enthusiasm in getting to use your brand new card - however, it can only be used from 15102021! We apologise for any inconvenience caused!
+24
+24!################################
+24!####### PROCESSING CARD ########
+24!################################
+24
+24BYour card has been processed successfully. Please enter your PIN!
+24®The system has detected a card that has been reported stolen. Protocol requires the immediate confiscation of this card. We'd like to apologise for any inconvenience caused!
+24
+24!################################
+24!####### SWALLOWING CARD ########
+24!################################
+24
+28rGood Evening! Welcome to XYZ Bank Inc! We have several ATMs, currently from 1 - 5. Which ATM are you using today?
+28Not a valid ATM! Good bye!

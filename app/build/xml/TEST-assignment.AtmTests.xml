@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="assignment.AtmTests" tests="21" skipped="0" failures="0" errors="0" timestamp="2021-09-24T08:56:34" hostname="DESKTOP-QFLJ6HC" time="0.057">
+  <properties/>
+  <testcase name="testInvalidWithdrawal()" classname="assignment.AtmTests" time="0.031"/>
+  <testcase name="testEdgeAtmBalance()" classname="assignment.AtmTests" time="0.001"/>
+  <testcase name="testInvalidCard()" classname="assignment.AtmTests" time="0.0"/>
+  <testcase name="testValidAtmBalance()" classname="assignment.AtmTests" time="0.0"/>
+  <testcase name="testCardNotExist()" classname="assignment.AtmTests" time="0.0"/>
+  <testcase name="testToString()" classname="assignment.AtmTests" time="0.001"/>
+  <testcase name="testValidDates()" classname="assignment.AtmTests" time="0.001"/>
+  <testcase name="testInvalidRestock()" classname="assignment.AtmTests" time="0.0"/>
+  <testcase name="testValidCard()" classname="assignment.AtmTests" time="0.0"/>
+  <testcase name="testEdgeWithdrawal()" classname="assignment.AtmTests" time="0.0"/>
+  <testcase name="testValidBalance()" classname="assignment.AtmTests" time="0.0"/>
+  <testcase name="testValidWithdrawal()" classname="assignment.AtmTests" time="0.002"/>
+  <testcase name="testEdgeReciept()" classname="assignment.AtmTests" time="0.001"/>
+  <testcase name="testValidReciept()" classname="assignment.AtmTests" time="0.005"/>
+  <testcase name="testEdgeRestock()" classname="assignment.AtmTests" time="0.0"/>
+  <testcase name="testValidRestock()" classname="assignment.AtmTests" time="0.0"/>
+  <testcase name="testEdgeCardExists()" classname="assignment.AtmTests" time="0.0"/>
+  <testcase name="testInvalidDates()" classname="assignment.AtmTests" time="0.001"/>
+  <testcase name="testEdgeDeposit()" classname="assignment.AtmTests" time="0.001"/>
+  <testcase name="testValidDeposit()" classname="assignment.AtmTests" time="0.002"/>
+  <testcase name="testValidCardExists()" classname="assignment.AtmTests" time="0.001"/>
+  <system-out><![CDATA[Transaction Number: 2
+Transaction Type: Deposit
+Amount Deposited: $100.00
+Account Balance: $110.00
+Transaction Number: 2
+Transaction Type: Deposit
+Amount Deposited: $1000.00
+Account Balance: $1001.00
+Transaction Number: 3
+Transaction Type: Deposit
+Amount Deposited: $1000.00
+Account Balance: $1000.00
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Utilities.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">app</a> &gt; <a href="index.source.html" class="el_package">assignment</a> &gt; <span class="el_source">Utilities.java</span></div><h1>Utilities.java</h1><pre class="source lang-java linenums">package assignment;
+
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.BufferedWriter;
+import java.util.Calendar;
+import java.text.ParseException;
+/**
+ * Utilities class contains helper methods for other classes.
+ */
+<span class="nc" id="L15">public class Utilities {</span>
+    /**
+     * Used in Engine.importData() in order to extract all relevant information
+     * @return the string format of a database, where each line is a separate string
+     * in an ArrayList
+     * @param database represents the chosen database to be parsed
+     */
+    public static ArrayList&lt;String&gt; readFile(String database) throws FileNotFoundException {
+<span class="fc" id="L23">        File dataFile = new File(database);</span>
+<span class="fc" id="L24">        Scanner reader = new Scanner(dataFile);</span>
+<span class="fc" id="L25">        ArrayList&lt;String&gt; lines = new ArrayList&lt;String&gt;();</span>
+<span class="fc" id="L26">        String skip = reader.nextLine();</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        while (reader.hasNextLine()) {</span>
+<span class="fc" id="L28">            String data = reader.nextLine();</span>
+<span class="fc" id="L29">            lines.add(data);</span>
+<span class="fc" id="L30">        }</span>
+<span class="fc" id="L31">        reader.close();</span>
+<span class="fc" id="L32">        return lines;</span>
+    }
+    /**
+     * Converts cents to client friendly format of money for printing
+     * @return String formatted as $D.CC
+     * @param amount is the software representation of money in cents 
+     */
+    public static String printMoney(int amount) {
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">        if (amount &lt; 0) {</span>
+<span class="nc" id="L41">            return &quot;Error&quot;;</span>
+        }
+<span class="fc" id="L43">        int cents = amount % 100;</span>
+<span class="fc" id="L44">        int dollars = (amount - cents) / 100;</span>
+
+<span class="fc" id="L46">        return &quot;$&quot; + dollars + &quot;.&quot; + String.format(&quot;%02d&quot;, cents);</span>
+    }
+
+    /**
+     * Used in the command line interface when greeting the client
+     * @return greeting associated with the specific time of day
+     */
+    public static String timeDay() {
+<span class="fc" id="L54">        Calendar cal = Calendar.getInstance();</span>
+<span class="fc" id="L55">        int timeOfDay = cal.get(Calendar.HOUR_OF_DAY);</span>
+<span class="fc" id="L56">        String greeting = null;</span>
+<span class="pc bpc" id="L57" title="2 of 4 branches missed.">        if (timeOfDay &gt;= 0 &amp;&amp; timeOfDay &lt; 12) {</span>
+<span class="nc" id="L58">            greeting = &quot;Good Morning&quot;;        </span>
+<span class="pc bpc" id="L59" title="2 of 4 branches missed.">        } else if(timeOfDay &gt;= 12 &amp;&amp; timeOfDay &lt; 17){</span>
+<span class="nc" id="L60">            greeting = &quot;Good Afternoon&quot;;</span>
+<span class="pc bpc" id="L61" title="2 of 4 branches missed.">        } else if(timeOfDay &gt;= 17 &amp;&amp; timeOfDay &lt; 24){</span>
+<span class="fc" id="L62">            greeting = &quot;Good Evening&quot;;</span>
+        }
+<span class="fc" id="L64">        return greeting;</span>
+    }
+
+    /**
+     * Used to facilitate the exportData() function - overrites a given database 
+     * with updated information post-transaction (or restocking/updated card status)
+     * @param database the database to be updated
+     * @param previousInfo the specific entry to be updated prior to transaction
+     * @param currentInfo the specific entry to be updated with post transaction information
+     */
+    public static void exporter(String database, String previousInfo, String currentInfo, Boolean swallowed) {
+        try {
+<span class="fc" id="L76">            File Data = new File(database);</span>
+<span class="fc" id="L77">            Scanner sc = new Scanner(Data);</span>
+<span class="fc" id="L78">            StringBuffer sb = new StringBuffer();</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">            while (sc.hasNextLine()) {</span>
+<span class="fc" id="L80">                sb.append(sc.nextLine() + System.lineSeparator());</span>
+            }
+<span class="fc" id="L82">            String contents = sb.toString();</span>
+<span class="fc" id="L83">            sc.close();</span>
+<span class="fc bfc" id="L84" title="All 2 branches covered.">            if (swallowed) {</span>
+<span class="fc" id="L85">                contents = contents.replaceAll(previousInfo + &quot;\n&quot;, &quot;&quot;);</span>
+            } else {
+<span class="fc" id="L87">                contents = contents.replaceAll(previousInfo, currentInfo);</span>
+            }
+<span class="fc" id="L89">            FileWriter fw = new FileWriter(database);</span>
+<span class="fc" id="L90">            fw.append(contents);</span>
+<span class="fc" id="L91">            fw.flush();</span>
+<span class="nc" id="L92">        } catch (IOException e) {</span>
+<span class="nc" id="L93">            System.out.println(&quot;Database not found!&quot;);</span>
+<span class="fc" id="L94">        }</span>
+<span class="fc" id="L95">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

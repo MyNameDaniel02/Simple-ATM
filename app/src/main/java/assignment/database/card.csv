@@ -1,0 +1,15 @@
+userName,cardNumber,PIN,balance,adminStatus,safetyStatus,blockedStatus,issueDate,expiryDate
+Harry Kane,24345,2634,100000,false,safe,false,12112021,12112024
+Gareth Bale,01342,2364,100000,false,safe,false,01092020,01092023
+Heung Min Son,35346,9585,100000,false,safe,false,01032019,01032022
+Hugo Lloris,29485,2374,100000,false,missing,false,28072021,28072024
+Dele Alli,02567,1234,100000,false,safe,false,30112018,30112021
+Lucas Moura,73902,3643,100000,false,stolen,false,15102019,15102022
+Steve Bergwijn,34745,1254,100000,false,safe,false,04072019,04072022
+Daniel Levy,17456,7456,100000,false,safe,false,13072020,13072023
+Japhet Tanganga,34845,2346,100000,false,safe,false,15102021,15102024
+Sergio Reguilon,13456,1273,100000,false,safe,false,09112020,09112023
+Pierre Emile Hojbjerg,00000,0000,100000,false,safe,false,01012021,01012024
+Admin Malpass,01010,0101,1000000,true,safe,false,12092021,12092024
+Elliot Rotenstein,60206,0602,602602,false,stolen,false,01012019,01012021
+William Douglas Walter Gun,42069,3825,0,false,stolen,false,13072020,13072023
