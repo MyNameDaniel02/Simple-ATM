@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="assignment.CalendarTests" tests="12" skipped="0" failures="0" errors="0" timestamp="2021-09-24T08:56:34" hostname="DESKTOP-QFLJ6HC" time="0.009">
+  <properties/>
+  <testcase name="getMonthTests()" classname="assignment.CalendarTests" time="0.001"/>
+  <testcase name="isBeforeTest()" classname="assignment.CalendarTests" time="0.001"/>
+  <testcase name="isBeforeNow()" classname="assignment.CalendarTests" time="0.0"/>
+  <testcase name="getYearTests()" classname="assignment.CalendarTests" time="0.0"/>
+  <testcase name="getDayTests()" classname="assignment.CalendarTests" time="0.0"/>
+  <testcase name="getDateTests()" classname="assignment.CalendarTests" time="0.0"/>
+  <testcase name="subtractTimeTests()" classname="assignment.CalendarTests" time="0.0"/>
+  <testcase name="addTimeTests()" classname="assignment.CalendarTests" time="0.001"/>
+  <testcase name="getStringFormattedTests()" classname="assignment.CalendarTests" time="0.001"/>
+  <testcase name="getStringShortTests()" classname="assignment.CalendarTests" time="0.0"/>
+  <testcase name="getMonthNameTests()" classname="assignment.CalendarTests" time="0.0"/>
+  <testcase name="stringToCalendarTests()" classname="assignment.CalendarTests" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="assignment.EngineTests" tests="7" skipped="1" failures="0" errors="0" timestamp="2021-09-24T08:56:34" hostname="DESKTOP-QFLJ6HC" time="0.554">
+  <properties/>
+  <testcase name="cardValidationTest()" classname="assignment.EngineTests" time="0.017"/>
+  <testcase name="atmTest()" classname="assignment.EngineTests" time="0.002"/>
+  <testcase name="statusCheckTest()" classname="assignment.EngineTests" time="0.003"/>
+  <testcase name="validAtmImport()" classname="assignment.EngineTests" time="0.003"/>
+  <testcase name="cardTest()" classname="assignment.EngineTests" time="0.0"/>
+  <testcase name="invalidAtmImport()" classname="assignment.EngineTests" time="0.002"/>
+  <testcase name="interfaceTest()" classname="assignment.EngineTests" time="0.524">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[Unfortunately your card has expired on 01012021! Please contact your local XYZ branch to get a new card. Thank you!
+We love the enthusiasm in getting to use your brand new card - however, it can only be used from 15102021! We apologise for any inconvenience caused!
+
+################################
+####### PROCESSING CARD ########
+################################
+
+Your card has been processed successfully. Please enter your PIN!
+The system has detected a card that has been reported stolen. Protocol requires the immediate confiscation of this card. We'd like to apologise for any inconvenience caused!
+
+################################
+####### SWALLOWING CARD ########
+################################
+
+Good Evening! Welcome to XYZ Bank Inc! We have several ATMs, currently from 1 - 5. Which ATM are you using today?
+Not a valid ATM! Good bye!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
